@@ -1,0 +1,6 @@
+include README.rst
+include LICENSE
+include requirements.txt
+recursive-include ckanext/onicse_theme *.html *.json *.js *.less *.css *.mo *.yml
+recursive-include ckanext/onicse_theme/migration *.ini *.py *.mako
+recursive-include ckanext/onicse_theme/public *.*

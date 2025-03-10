@@ -1,0 +1,14 @@
+# onicse_theme-js:
+#   filter: rjsmin
+#   output: ckanext-onicse_theme/%(version)s-onicse_theme.js
+#   contents:
+#     - js/onicse_theme.js
+#   extra:
+#     preload:
+#       - base/main
+
+# onicse_theme-css:
+#   filter: cssrewrite
+#   output: ckanext-onicse_theme/%(version)s-onicse_theme.css
+#   contents:
+#     - css/onicse_theme.css
