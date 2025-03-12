@@ -1,0 +1,6 @@
+{% if g.footer_product %}
+<div class="col-md-4 attribution">
+  <h2 class="title">{{ _('Product') }}</h2>
+    {{ h.render_markdown(g.footer_product) }}
+</div>
+{% endif %}
