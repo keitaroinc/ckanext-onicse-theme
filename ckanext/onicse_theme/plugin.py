@@ -19,4 +19,6 @@ class OnicseThemePlugin(plugins.SingletonPlugin):
         return {
             'get_recently_updated_datasets':
                 helpers.get_recently_updated_datasets,
+            'get_date_by_id':
+                helpers.get_date_by_id,
         }

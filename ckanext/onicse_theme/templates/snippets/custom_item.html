@@ -1,4 +1,4 @@
-{% set pkg = c.pkg_dict %}
+{% set group = group or pkg %}
 
 <!-- Set type of item -->
 {% if type is defined %}
@@ -15,18 +15,17 @@
   {% set description = group.description %}
 {% endif %}
 
-<!-- Set url for item -->
+<!-- Set URL for item -->
 {% if group.type != 'datarequest' %}
   {% set url = h.url_for(group.type ~ '_read', id=group.name or group.title) %}
 {% else %}
-  {% set url =  h.url_for('datarequests.show', id=group.get('id','')) %}
+  {% set url = h.url_for('datarequests.show', id=group.get('id', '')) %}
 {% endif %}
 
-
 {% block featured_item %}
-<a href="{{ url }}" class="featured-item {{group.type}}-item">
+<a href="{{ url }}" class="featured-item {{ group.type }}-item">
   {% block featured_item_header %}
-  {% set truncate=truncate or 0 %}
+  {% set truncate = truncate or 0 %}
   {% set truncate_title = truncate_title or 0 %}
   {% set title = group.title or group.name %}
   <div class="title-wrap">
@@ -35,69 +34,55 @@
       <div class="group-icon">
         <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-' + group.type + '.png') }}"
           alt="{{ group.name }}" />
-          <!-- <i class="fa fa-folder-open" aria-hidden="true"></i> -->
       </div>
       {% endblock %}
-
     {% endif %}
-      {% block featured_item_header_title %}
-      <h3 class="group-title">
-        {% if group.type == 'datarequest' %}
-          {% if group.get('closed', False) %}
-            <span class="uppercase label label-closed">
-              <i class="icon-lock fa fa-lock"></i> {% trans %}Closed{% endtrans %}
-            </span>
-          {% else %}
-            <span class="uppercase label label-open">
-              <i class="icon-unlock fa fa-unlock"></i> {% trans %}Open{% endtrans %}
-            </span>
-          {% endif %}
+    {% block featured_item_header_title %}
+    <h3 class="group-title">
+      {% if group.type == 'datarequest' %}
+        {% if group.get('closed', False) %}
+          <span class="uppercase label label-closed">
+            <i class="icon-lock fa fa-lock"></i> {% trans %}Closed{% endtrans %}
+          </span>
+        {% else %}
+          <span class="uppercase label label-open">
+            <i class="icon-unlock fa fa-unlock"></i> {% trans %}Open{% endtrans %}
+          </span>
         {% endif %}
-          {% block heading_private %}
-          {% if group.private %}
-            <span class="dataset-private label label-inverse">
-              <i class="fa fa-lock"></i>
-              {{ _('Private') }}
-              </span>
-            {% endif %}
-          {% endblock %}
-
-        {{ group.title or group.name }}
-      </h3>
+      {% endif %}
+      {% block heading_private %}
+      {% if group.private %}
+        <span class="dataset-private label label-inverse">
+          <i class="fa fa-lock"></i>
+          {{ _('Private') }}
+        </span>
+      {% endif %}
       {% endblock %}
 
-      </div>
-
+      {{ group.title or group.name }}
+    </h3>
+    {% endblock %}
+  </div>
   {% endblock %}
 
-  {% block resources %}
-    {% if group.resources and not hide_resources %}
-      {% block resources_outer %}
-      <ul class="dataset-resources list-unstyled">
-        {% block resources_inner %}
-          {% for resource in h.dict_list_reduce(group.resources, 'format') %}
-            <li class="label label-default" data-format="{{ resource.lower() }}">
-              {{ resource }}
-            </li>
-          {% endfor %}
-        {% endblock %}
-
-      </ul>
-      {% endblock %}
-
-    {% endif %}
-  {% endblock %}
+  {% set created_at = h.get_date_by_id(group.id) %}
+  {% if created_at %}
+    <div class="creation-date">
+      <span class="label label-info-custom">{{ created_at.strftime('%B %d, %Y') }}</span>
+    </div>
+  {% endif %}
 
   {% if group.type == 'datarequest' %}
     <div class="datarequest-properties">
       {% if h.show_comments_tab() %}
-        <i class="icon-comment fa fa-comment"></i> {{ h.get_comments_number(group.get('id', '')) }}</span>
+        <i class="icon-comment fa fa-comment"></i> {{ h.get_comments_number(group.get('id', '')) }}
       {% endif %}
       <div class="divider">
         <span class="date-datarequests">{{ h.time_ago_from_timestamp(group.open_time) }}</span>
       </div>
     </div>
   {% endif %}
+  
   {% if group.user_member %}
     <input name="group_remove.{{ group.id }}" value="{{ _('Remove') }}" type="submit" class="btn btn-danger btn-sm media-edit" title="{{ _('Remove dataset from this group') }}"/>
   {% endif %}
