@@ -1,0 +1,188 @@
+# Translations template for ckanext-onicse-theme.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the ckanext-onicse-theme
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-onicse-theme 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-03-14 15:49+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ckanext/onicse_theme/templates/footer.html:9
+msgid "About {0}"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/footer.html:15
+msgid "CKAN API"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/footer.html:16
+msgid "CKAN Association"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/footer.html:24
+msgid ""
+"<strong>Powered by</strong> <a class=\"hide-text ckan-footer-logo\" "
+"href=\"http://ckan.org\">CKAN</a>"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:14
+msgid "Sysadmin settings"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:16
+msgid "Admin"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:22
+msgid "View profile"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:30
+msgid "View dashboard"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:32
+msgid "Dashboard"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:38
+#: ckanext/onicse_theme/templates/header.html:40
+msgid "Profile settings"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:48
+msgid "Log out"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:58
+msgid "Account"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:61
+msgid "Log in"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:63
+msgid "Register"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:102
+msgid "Toggle navigation"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:115
+msgid "DATASETS"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:120
+msgid "ORGANIZATIONS"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:125
+msgid "GROUPS"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/header.html:130
+msgid "ABOUT"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/page.html:6
+msgid "Skip to main content"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/page.html:30
+msgid "Breadcrumb"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/index.html:3
+msgid "Welcome"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/index.html:28
+msgid "OUR DATA"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/index.html:55
+msgid "No datasets have been added yet"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/snippets/search.html:2
+msgid "Eg. environment"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/snippets/search.html:7
+msgid "UNIVERSITE DU QUEBEC EN ABITIBI - "
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/snippets/search.html:8
+msgid "TÉMISCAMINGUE (UQAT) OPEN DATA PORTAL "
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/snippets/search.html:10
+msgid "Search datasets"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/snippets/search.html:13
+msgid "Search"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/snippets/search.html:18
+msgid "Popular tags"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/custom_item.html:45
+msgid "Closed"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/custom_item.html:49
+msgid "Open"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/custom_item.html:57
+msgid "Private"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/custom_item.html:87
+#: ckanext/onicse_theme/templates/snippets/custom_item.html:90
+msgid "Remove"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/custom_item.html:87
+msgid "Remove dataset from this group"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/custom_item.html:90
+msgid "Remove dataset from this showcase"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/footer_company.html:3
+msgid "Company"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/footer_product.html:3
+msgid "Product"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/home_breadcrumb_item.html:1
+msgid "Home"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/language_selector.html:5
+msgid "Language"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/snippets/language_selector.html:16
+msgid "Go"
+msgstr ""
+
