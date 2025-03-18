@@ -1,12 +1,13 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ckanext.onicse_theme.helpers as helpers
+from ckan.lib.plugins import DefaultTranslation
 
-class OnicseThemePlugin(plugins.SingletonPlugin):
+
+class OnicseThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
-
-    
+    plugins.implements(plugins.ITranslation)
 
     # IConfigurer
 
