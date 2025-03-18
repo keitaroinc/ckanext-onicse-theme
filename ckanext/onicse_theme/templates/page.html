@@ -12,6 +12,25 @@
 
   {%- block content %}
     {% block maintag %}<div class="main">{% endblock %}
+    
+      <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
+        {% block breadcrumb %}
+          {% if self.breadcrumb_content() | trim %}
+            <ol class="breadcrumb">
+              <li class="home">
+                <a href="/">
+                  <i class="fas fa-home"></i>
+                  <span> Home</span>
+                </a>
+              </li>
+              {% block breadcrumb_content %}{% endblock %}
+            </ol>
+          {% endif %}
+        {% endblock %}
+      </div>
+
+      <div class="spacer"></div>
+
       <div id="content" class="container">
         {% block main_content %}
           {% block flash %}
@@ -26,63 +45,44 @@
             </div>
           {% endblock %}
 
-          {% block toolbar %}
-          <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
-            {% block breadcrumb %}
-              {% if self.breadcrumb_content() | trim %}
-                <ol class="breadcrumb">
-                  <li class="home">
-                    <a href="/">
-                      <i class="fas fa-home"></i>
-                      <span> Home</span>
-                    </a>
-                  </li>
-                  {% block breadcrumb_content %}{% endblock %}
-                </ol>
-              {% endif %}
+          {% block pre_primary %}{% endblock %}
+
+          <div class="d-flex">
+            {% block secondary %}
+              <aside class="secondary col-md-3">
+                {% block secondary_content %}{% endblock %}
+              </aside>
             {% endblock %}
-          </div>
-        {% endblock %}
 
-        <div class="spacer"></div>
-
-        {% block pre_primary %}{% endblock %}
-
-        <div class="d-flex">
-          {% block secondary %}
-            <aside class="secondary col-md-3">
-              {% block secondary_content %}{% endblock %}
-            </aside>
-          {% endblock %}
-
-          {% block primary %}
-            <div class="primary col-md-9 col-xs-12" role="main">
-              {% block primary_content %}
-                <article class="module">
-                  {% block page_header %}
-                    <header class="module-content page-header">
-                      {% if self.content_action() | trim %}
-                        <div class="content_action">
-                          {% block content_action %}{% endblock %}
+            {% block primary %}
+              <div class="primary col-md-9 col-xs-12" role="main">
+                {% block primary_content %}
+                  <article class="module">
+                    {% block page_header %}
+                      <header class="module-content page-header">
+                        {% if self.content_action() | trim %}
+                          <div class="content_action">
+                            {% block content_action %}{% endblock %}
+                          </div>
+                        {% endif %}
+                        <ul class="nav nav-tabs">
+                          {% block content_primary_nav %}{% endblock %}
+                        </ul>
+                      </header>
+                    {% endblock %}
+                    <div class="module-content">
+                      {% if self.page_primary_action() | trim %}
+                        <div class="page_primary_action">
+                          {% block page_primary_action %}{% endblock %}
                         </div>
                       {% endif %}
-                      <ul class="nav nav-tabs">
-                        {% block content_primary_nav %}{% endblock %}
-                      </ul>
-                    </header>
-                  {% endblock %}
-                  <div class="module-content">
-                    {% if self.page_primary_action() | trim %}
-                      <div class="page_primary_action">
-                        {% block page_primary_action %}{% endblock %}
-                      </div>
-                    {% endif %}
-                    {% block primary_content_inner %}{% endblock %}
-                  </div>
-                </article>
-              {% endblock %}
-            </div>
-          {% endblock %}
+                      {% block primary_content_inner %}{% endblock %}
+                    </div>
+                  </article>
+                {% endblock %}
+              </div>
+            {% endblock %}
+          </div>
         </div>
       </div>
     </div>
