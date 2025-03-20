@@ -39,7 +39,8 @@ For functional tests that involve requests to the application, you can use the
         assert response.status_code == 200
 
 
-To temporary patch the CKAN configuration for the duration of a test you can use:
+To temporary patch the CKAN configuration for
+the duration of a test you can use:
 
     import pytest
 
@@ -47,7 +48,8 @@ To temporary patch the CKAN configuration for the duration of a test you can use
     def test_some_action():
         pass
 """
-import ckanext.onicse_theme.plugin as plugin
+import pytest
+from ckan.plugins.core import plugin_loaded
 
 
 @pytest.mark.ckan_config("ckan.plugins", "onicse_theme")
