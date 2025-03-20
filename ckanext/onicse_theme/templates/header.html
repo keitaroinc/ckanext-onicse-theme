@@ -112,22 +112,22 @@
 
               <li class="nav-item">
                 <a class="nav-link" href="{{ h.url_for(dataset_type ~ '.search') }}">
-                  {{ h.humanize_entity_type('package', dataset_type, 'main nav') or _("DATASETS") }}
+                  {{ h.humanize_entity_type('package', dataset_type, 'main nav') or _("Datasets") }}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ h.url_for(org_type ~ '.index') }}">
-                  {{ h.humanize_entity_type('organization', org_type, 'main nav') or _("ORGANIZATIONS") }}
+                  {{ h.humanize_entity_type('organization', org_type, 'main nav') or _("Organizations") }}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ h.url_for(group_type ~ '.index') }}">
-                  {{ h.humanize_entity_type('group', group_type, 'main nav') or _("GROUPS") }}
+                  {{ h.humanize_entity_type('group', group_type, 'main nav') or _("Groups") }}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ h.url_for('home.about') }}">
-                  {{ _("ABOUT") }}
+                  {{ _("About") }}
                 </a>
               </li>
             {% endblock %}
