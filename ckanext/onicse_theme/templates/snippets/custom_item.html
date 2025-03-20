@@ -1,3 +1,4 @@
+
 {% set group = group or pkg %}
 
 <!-- Set type of item -->
@@ -38,7 +39,7 @@
       {% endblock %}
     {% endif %}
     {% block featured_item_header_title %}
-    <h3 class="group-title">
+    <h3 class="{% if group.type == 'dataset' %}dataset-title{% else %}group-title{% endif %}">
       {% if group.type == 'datarequest' %}
         {% if group.get('closed', False) %}
           <span class="uppercase label label-closed">
@@ -72,6 +73,15 @@
     </div>
   {% endif %}
 
+  {% set group_titles = h.get_groups_by_id(group.id) %}
+  {% if group_titles %}
+    <div class="group-name">
+        {% for group in group_titles %}
+          {{ group }}
+        {% endfor %}
+    </div>
+  {% endif %}
+
   {% if group.type == 'datarequest' %}
     <div class="datarequest-properties">
       {% if h.show_comments_tab() %}
@@ -82,7 +92,7 @@
       </div>
     </div>
   {% endif %}
-  
+ 
   {% if group.user_member %}
     <input name="group_remove.{{ group.id }}" value="{{ _('Remove') }}" type="submit" class="btn btn-danger btn-sm media-edit" title="{{ _('Remove dataset from this group') }}"/>
   {% endif %}
