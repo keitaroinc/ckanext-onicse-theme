@@ -25,7 +25,7 @@
     </div>
 
     <div class="container datasets-section">
-      <h2>{{_("Our Data")}}</h2>
+      <h2 class="text-uppercase">{{_("Our Data")}}</h2>
         {% snippet '/home/snippets/featured_groups.html', getGroups=true %}
       </div>
     </div>
@@ -34,7 +34,7 @@
   <div class="updated-datasets-section">
     <div class="container">
       <div class="header-row">
-        <h2 class="text-left">{{_("Recently Updated Datasets")}}</h2>
+        <h2 class="text-left text-uppercase">{{_("Recently Updated Datasets")}}</h2>
         <div class="add-dataset-btn-container">
           <a href="{{ h.url_for('/dataset/') }}" class="btn btn-primary add-dataset-btn">{{_("All Datasets")}}</a>
         </div>
