@@ -1,0 +1,111 @@
+/* BwGradual-Black */
+@font-face {
+    font-family: "BwGradual";
+    font-weight: 900;
+    font-style: normal;
+    src: url('/base/fonts/BwGradual-Black.woff2') format('woff2');
+  }
+
+  /* BwGradual-BlackItalic */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 900;
+    font-style: italic;
+    src: url('/base/fonts/BwGradual-BlackItalic.woff2') format('woff2');
+  }
+  
+  /* BwGradual-Bold */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 700;
+    font-style: normal;
+    src: url('/base/fonts/BwGradual-Bold.woff2') format('woff2');
+  }
+  
+  /* BwGradual-BoldItalic */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 700;
+    font-style: italic;
+    src: url('/base/fonts/BwGradual-BoldItalic.woff2') format('woff2');
+  }
+  
+  /* BwGradual-ExtraBold */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 800;
+    font-style: normal;
+    src: url('/base/fonts/BwGradual-ExtraBold.woff2') format('woff2');
+  }
+  
+  /* BwGradual-ExtraBoldItalic */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 800;
+    font-style: italic;
+    src: url('/base/fonts/BwGradual-ExtraBoldItalic.woff2') format('woff2');
+  }
+
+  /* BwGradual-Light */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 300;
+    font-style: normal;
+    src: url('/base/fonts/BwGradual-Light.woff2') format('woff2');
+  }
+
+  /* BwGradual-LightItalic */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 300;
+    font-style: italic;
+    src: url('/base/fonts/BwGradual-LightItalic.woff2') format('woff2');
+  }
+  
+  /* BwGradual-Medium */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 500;
+    font-style: normal;
+    src: url('/base/fonts/BwGradual-Medium.woff2') format('woff2');
+  }
+  
+  /* BwGradual-MediumItalic */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 500;
+    font-style: italic;
+    src: url('/base/fonts/BwGradual-MediumItalic.woff2') format('woff2');
+  }
+  
+  /* BwGradual-Regular */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 400;
+    font-style: normal;
+    src: url('/base/fonts/BwGradual-Regular.woff2') format('woff2');
+  }
+  
+  /* BwGradual-RegularItalic */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 400;
+    font-style: italic;
+    src: url('/base/fonts/BwGradual-RegularItalic.woff2') format('woff2');
+  }
+  
+  /* BwGradual-Thin */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 100;
+    font-style: normal;
+    src: url('/base/fonts/BwGradual-Thin.woff2') format('woff2');
+  }
+  
+  /* BwGradual-ThinItalic */
+  @font-face {
+    font-family: "BwGradual";
+    font-weight: 100;
+    font-style: italic;
+    src: url('/base/fonts/BwGradual-ThinItalic.woff2') format('woff2');
+}
