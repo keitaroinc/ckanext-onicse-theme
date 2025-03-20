@@ -16,6 +16,7 @@
       <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
         {% block breadcrumb %}
           {% if self.breadcrumb_content() | trim %}
+          <div class="container">
             <ol class="breadcrumb">
               <li class="home">
                 <a href="/">
@@ -25,6 +26,7 @@
               </li>
               {% block breadcrumb_content %}{% endblock %}
             </ol>
+          </div>
           {% endif %}
         {% endblock %}
       </div>
