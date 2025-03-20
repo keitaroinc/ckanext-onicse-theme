@@ -84,20 +84,20 @@ msgid "Toggle navigation"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/header.html:115
-msgid "DATASETS"
-msgstr "ENSEMBLES DE DONNÉES"
+msgid "Datasets"
+msgstr "Ensembles De Données"
 
 #: ckanext/onicse_theme/templates/header.html:120
-msgid "ORGANIZATIONS"
-msgstr "ORGANISATIONS"
+msgid "Organization"
+msgstr "Organisations"
 
 #: ckanext/onicse_theme/templates/header.html:125
-msgid "GROUPS"
-msgstr "GROUPES"
+msgid "Groups"
+msgstr "Groupes"
 
 #: ckanext/onicse_theme/templates/header.html:130
-msgid "ABOUT"
-msgstr "À PROPOS"
+msgid "About"
+msgstr "À Propos"
 
 #: ckanext/onicse_theme/templates/page.html:6
 msgid "Skip to main content"
@@ -112,7 +112,7 @@ msgid "Welcome"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/home/index.html:28
-msgid "NOS DONNÉES"
+msgid "Nos Données"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/home/index.html:55
@@ -124,11 +124,11 @@ msgid "Eg. environment"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:7
-msgid "UNIVERSITE DU QUEBEC EN ABITIBI - "
+msgid "Universite Du Quebec en Abitibi "
 msgstr ""
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:8
-msgid "TÉMISCAMINGUE (UQAT) OPEN DATA PORTAL "
+msgid "Témiscamingue (Uqat) Open Data Portal "
 msgstr ""
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:10
@@ -189,13 +189,13 @@ msgid "Go"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/home/index.html:37
-msgid "RECENTLY UPDATED DATASETS"
-msgstr "ENSEMBLES DE DONNÉES RÉCEMMENT MISES À JOUR"
+msgid "Recently Updated Datasets"
+msgstr "Ensembles De Données Récemment Mises À Jour"
 
 #: ckanext/onicse_theme/templates/home/index.html:39
 msgid "All Datasets"
 msgstr "Tous les ensembles de données"
 
 #: ckanext/onicse_theme/templates/home/index.html:28
-msgid "OUR DATA"
-msgstr "NOS DONNÉES"
+msgid "Our Data"
+msgstr "Nos Données"
