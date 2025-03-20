@@ -1,5 +1,6 @@
 :root {
     --primary-color: #2b170c; /* Primary color */
+    --secondary-color: #ca3f16;
     --nav-link-color: #333333;
     --active-nav-link-color: #ca3f16; 
     --goldenrod-color: goldenrod;
@@ -15,8 +16,24 @@
     --toolbar-bg-color: #f4f2ee;
     --breadcrumb-color: rgb(128, 128, 128);
     --tag-bg-color: #f6f6f6;
+    --font-family: "BwGradual", sans-serif;
     }
-  
+ body{
+    a{
+        color: var(--secondary-color);
+    }
+    font-family: var(--font-family);
+    color: var(--primary-color);
+ } 
+ .dataset-heading a{
+    color: inherit;
+ }
+ .dataset a:hover{
+    color: inherit
+ }
+ a:hover{
+    color: inherit;
+ }
 .masthead {
     background: none !important;
     margin-top: -5px;
@@ -72,6 +89,9 @@
     margin-bottom: 30px;
     margin-top: 15px;
 } 
+.main .primary{
+    padding: 0 1rem;
+}
 .masthead .main-navbar ul li a {
     color: var(--nav-link-color) !important;
     font-size: 18px;
@@ -95,9 +115,6 @@
     border-radius: 0.3rem;
     background-color: var(--white-color);
   }
-.masthead, .box, .wrapper {
-    font-family: 'BwGradual', sans-serif !important;
-}
 .navbar-nav {
     display: flex;
     flex-direction: column;
@@ -164,7 +181,6 @@
     margin-top: -25px;
     display: flex;
     align-items: center; 
-    font-family: "BwGradual";
 }
 .search-form{
     border-bottom: 1px;
@@ -180,18 +196,14 @@
 .homepage .hero {
     background-image: url('/base/images/1.png') !important;
     background-size: cover;
-    height: 400px;
-}
-.heading1{
-    color: var(--white-color);
-    font-size: 28px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 .popular{
     color: var(--white-color);
     margin-right: 10px;
     margin-top: 5px;
     font-size: 14px;
-    font-family: "BwGradual";
 }
 .tag {
     display: inline-block;
@@ -341,7 +353,7 @@
 /* Add Datasets button */
 .add-dataset-btn {
     background-color: var(--warning-btn-bg-color);
-    border-color: #d43f3a;
+    border-color: var(--secondary-color);
     color: var(--white-color);
     text-decoration: none;
     padding: 7px 18px; 
@@ -375,7 +387,7 @@
     margin-top: 45px;
 }
 .add-dataset-btn:hover {
-    background-color: var(--warning-btn-hover-color);
+    background-color: var(--secondary-color);
 }
 .site-footer {
     background-color: var(--primary-color); 
@@ -388,7 +400,7 @@
     width: 100%;
 }
 .updated-datasets-section .add-dataset-btn:hover {
-    background-color: var(--warning-btn-hover-color);
+    background-color: var(--secondary-color);
 }
 
 .updated-datasets-section .header-row {
@@ -463,28 +475,20 @@
   }
 
 .toolbar {
-    width: 100vw;
-    height: 35px;
     background-color: var(--toolbar-bg-color);
     padding: 10px;
-    text-align: center;
-    margin: 0; 
-    margin-top: -20px;
 }
 .toolbar .breadcrumb {
     font-size: 14px;
-    margin-bottom: -5px;
-    margin-top: -2px;
-    padding-left: 20.5rem; 
-    width: 100%;
+    padding: 0 .25rem;
+   
 }
 .toolbar .breadcrumb li {
     display: inline;
 }  
 .toolbar .breadcrumb a {
     color: rgb(61, 61, 61);
-    width: 16px;
-    height: 16px;
+    font-size: 14px;
 }
 .toolbar .breadcrumb .active a {
     color: rgb(61, 61, 61);
@@ -529,8 +533,8 @@
 }
 
 .btn-primary {
-    background-color: rgb(185, 24, 24) !important;
-    border-color: rgb(185, 24, 24) !important;
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color)!important;
     color: var(--white-color) !important;
 }
 
@@ -538,7 +542,6 @@ h1, h2, h3, h4, h5, h6, .group-title, .category-item h3 {
     font-weight: 700;
 
 }
-
 .label-info-custom {
     margin-top: -10px;
     color: var(--nav-link-color);
@@ -550,12 +553,7 @@ h1, h2, h3, h4, h5, h6, .group-title, .category-item h3 {
     line-height: 1.2; 
 }
 .filters .module-heading {
-    font-size: 13px;
     background-color: var(--white-color);
-}
-.module-content{
-    margin-left: 25px;
-    font-family: "BwGradual";
 }
 .module-content.empty {
     font-style: italic;
@@ -581,7 +579,6 @@ h1, h2, h3, h4, h5, h6, .group-title, .category-item h3 {
     width: 100%;
     padding: 8px 10px;
     margin-bottom: 8px;
-    font-family: "BwGradual";
 }
 
 .item-label {
@@ -608,13 +605,7 @@ h1, h2, h3, h4, h5, h6, .group-title, .category-item h3 {
 .fa-filter{
     margin-right: 5px;
 }
-.module.module-narrow.social {
-    margin-left: 25px;   
-}
 
-.module.module-narrow.module-shallow.license{
-    margin-left: 25px;
-}
 .module-content.page-header{
     background-color: var(--white-color);
 }
@@ -631,13 +622,49 @@ h1, h2, h3, h4, h5, h6, .group-title, .category-item h3 {
     border-top: 1px solid rgb(241, 241, 241); 
     padding-top: 23px;
 } 
-
-body{
-    font-family: 'BwGradual';
+.nav-facet .nav-item:last-child{
+    border-bottom: solid rgb(207, 207, 207) 0.5;
 }
+
 .subtitle{
     padding-left: 11px;
 }
-.empty{
-    font-family: "BwGradual";
+.font-light{
+    font-weight: 300;
+}
+.module-narrow .nav-item.active > a, 
+.module-narrow .nav-aside li.active a {
+    background-color: var(--primary-color);
+    flex-grow: 1;
+}
+.module-narrow .nav-item.active > a:hover, 
+.module-narrow .nav-aside li.active a:hover {
+    background-color: var(--primary-color);
+}
+.module-narrow .nav-item.active > a::before,
+.module-narrow .nav-aside li.active a {
+    border-right: none;
+    border-left-color: var(--primary-color);
+    border-left-width: 6px;
+    top: 0;
+    bottom: 0;
+    right: -6px;
+    width: 6px;
+    height: 34px;
+}
+
+.module-narrow .nav-item.active, 
+.module-narrow .nav-aside li.active{
+    background-color: transparent !important; 
+}
+
+ .pill {
+    background-color: var(--primary-color) !important; 
+}
+
+.page-header .nav-tabs li a{
+    color: var(--secondary-color);
+}
+.page-header .nav-tabs li a:hover{
+    color: var(--secondary-color);   
 }
