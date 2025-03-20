@@ -1,4 +1,5 @@
 onicse_theme:
-  output: ckanext-onicse_theme/%(version)s-onicse_theme.css
+  output: ckanext-onicse_theme/%(version)s-style.css
   contents:
-    - onicse_theme.css
+    - style.css
+    - fonts.css
