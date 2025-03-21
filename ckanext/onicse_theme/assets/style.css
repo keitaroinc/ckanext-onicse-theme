@@ -413,7 +413,7 @@
 }
 .updated-datasets-section .header-row h2 {
     font-size: 24px;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 .updated-datasets-section .add-dataset-btn-container {
@@ -667,4 +667,7 @@ h1, h2, h3, h4, h5, h6, .group-title, .category-item h3 {
 }
 .page-header .nav-tabs li a:hover{
     color: var(--secondary-color);   
+}
+.right-align{
+    margin-left: 10px;
 }
