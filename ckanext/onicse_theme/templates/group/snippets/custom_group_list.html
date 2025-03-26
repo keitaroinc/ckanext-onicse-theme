@@ -1,0 +1,18 @@
+{% set all_groups = h.get_all_groups() %}
+
+<div class="container py-4">
+    <div class="row">
+    {% for group in all_groups %}
+          <div class="col-md-4">
+            <div class="card" id="group-topics-list">
+            <a href="/group/{{ group.id }}">
+              <div class="card-body" id="group-item">
+                <img class="" src="{{ group.image_display_url }}" id="group-icon"/>    
+                <h5 class="card-text" id="group-title">{{ group.title }}</h5>
+              </div>
+            </a>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>

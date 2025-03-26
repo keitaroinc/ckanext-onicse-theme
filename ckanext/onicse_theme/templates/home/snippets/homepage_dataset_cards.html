@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="row">
+        {% for dataset in datasets %}
+            {% if dataset.organization.title is defined %}
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <small class="card-text" id="group-name">
+                                {% for group in dataset.groups %}
+                                    {{ group.title }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </small>
+                            <h4 class="card-title" id="ds-title">
+                                <a href="/dataset/{{ dataset.id }}">{{ dataset.title }}</a>
+                            </h4>
+                            {% set created_at = h.get_date_by_id(dataset.id) %}
+                            {% if created_at %}
+                                <p class="card-text" id="date">{{ created_at.strftime('%B %d, %Y') }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                {{ 'Organization not defined' }}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
