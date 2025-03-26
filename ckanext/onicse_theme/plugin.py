@@ -24,4 +24,6 @@ class OnicseThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 helpers.get_date_by_id,
             'get_groups_by_id':
                 helpers.get_groups_by_id,
+            'get_all_groups':
+            helpers.get_all_groups, 
         }
