@@ -25,31 +25,27 @@
     </div>
   </div>
 
-    <div class="container datasets-section">
-      <h2 class="text-uppercase">{{_("Our Data")}}</h2>
-        {% snippet '/home/snippets/featured_groups.html', getGroups=true %}
-      </div>
-    
-    
+  <div class="container py-3 datasets-section">
+    <h2 class="text-uppercase right-align">{{_("Our Data")}}</h2>
+    {% block featured_group %}
+    {% snippet 'group/snippets/custom_group_list.html' %}
+    {% endblock %}
+  </div>
     
   <div class="updated-datasets-section">
     <div class="container">
-      <div class="header-row">
-        <h2 class="text-left text-uppercase">{{_("Recently Updated Datasets")}}</h2>
+      <div class="hstack justify-content-between gap-2 px-4">
+        <h2 class="text-uppercase m-0 p-0">{{_("Recently Updated Datasets")}}</h2>
         <div class="add-dataset-btn-container">
-          <a href="{{ h.url_for('/dataset/') }}" class="btn btn-primary add-dataset-btn">{{_("All Datasets")}}</a>
+          <a href="{{ h.url_for('/dataset/') }}" class="btn btn-primary">{{_("All Datasets")}}</a>
         </div>
       </div>
     
-      <div class="white-blocks-container">
+      <div id="white-blocks-container">
         {% set recent_datasets = h.get_recently_updated_datasets() %}
         {% if recent_datasets %}
-          {% for dataset in recent_datasets %}
-            <div class="white-block">
-              {% set group = dataset %}
-              {% snippet 'snippets/custom_item.html', group=group %}
-            </div>
-          {% endfor %}
+              {% set latest_datasets = recent_datasets[:3] %}
+              {{ h.snippet('home/snippets/homepage_dataset_cards.html', datasets=latest_datasets) }}
         {% else %}
           <p class="empty">{{ _('No datasets have been added yet') }}</p>
         {% endif %}
