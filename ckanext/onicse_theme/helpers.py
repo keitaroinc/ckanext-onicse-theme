@@ -84,3 +84,12 @@ def get_groups_by_id(package_id):
     except Exception as e:
         log.error(f"Error fetching groups for package {package_id}: {str(e)}")
         return None
+    
+    
+def get_all_groups():
+    data_dict = {
+        'all_fields': True
+    }
+    groups = toolkit.get_action('group_list')({}, data_dict)
+
+    return groups
