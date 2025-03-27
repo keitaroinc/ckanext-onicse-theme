@@ -5,17 +5,17 @@
                 <div class="col-12 col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <small class="card-text" id="group-name">
+                            <div class="card-header border border-0 mb-3 p-0 me-5 bg-body text-black-50 fw-bold">
                                 {% for group in dataset.groups %}
                                     {{ group.title }}{% if not loop.last %}, {% endif %}
                                 {% endfor %}
-                            </small>
-                            <h4 class="card-title" id="ds-title">
+                            </div>
+                            <h4 class="card-title">
                                 <a href="/dataset/{{ dataset.id }}">{{ dataset.title }}</a>
                             </h4>
                             {% set created_at = h.get_date_by_id(dataset.id) %}
                             {% if created_at %}
-                                <p class="card-text" id="date">{{ created_at.strftime('%B %d, %Y') }}</p>
+                                <div class="card-footer mt-3 p-0 me-5 border-0 bg-body text-black-50">{{ created_at.strftime('%B %d, %Y') }}</div>
                             {% endif %}
                         </div>
                     </div>
