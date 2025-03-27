@@ -188,14 +188,18 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: ckanext/onicse_theme/templates/home/index.html:37
+#: ckanext/onicse_theme/templates/home/index.html:38
 msgid "Recently Updated Datasets"
 msgstr "Ensembles De Données Récemment Mises À Jour"
 
-#: ckanext/onicse_theme/templates/home/index.html:39
+#: ckanext/onicse_theme/templates/home/index.html:40
 msgid "All Datasets"
 msgstr "Tous les ensembles de données"
 
-#: ckanext/onicse_theme/templates/home/index.html:28
+#: ckanext/onicse_theme/templates/home/index.html:29
 msgid "Our Data"
 msgstr "Nos Données"
+
+#: ckanext/onicse_theme/templates/home/index.html:54
+msgid "No datasets have been added yet"
+msgstr "Aucun ensemble de données n'a encore été ajouté"

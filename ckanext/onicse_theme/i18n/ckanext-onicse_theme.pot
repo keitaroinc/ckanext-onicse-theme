@@ -82,19 +82,19 @@ msgid "Toggle navigation"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/header.html:115
-msgid "DATASETS"
+msgid "Datasets"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/header.html:120
-msgid "ORGANIZATIONS"
+msgid "Organizations"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/header.html:125
-msgid "GROUPS"
+msgid "Groups"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/header.html:130
-msgid "ABOUT"
+msgid "About"
 msgstr ""
 
 #: ckanext/onicse_theme/templates/page.html:6
@@ -109,24 +109,12 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: ckanext/onicse_theme/templates/home/index.html:28
-msgid "OUR DATA"
-msgstr ""
-
 #: ckanext/onicse_theme/templates/home/index.html:55
 msgid "No datasets have been added yet"
-msgstr ""
+msgstr "Aucun ensemble de données n'a encore été ajouté"
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:2
 msgid "Eg. environment"
-msgstr ""
-
-#: ckanext/onicse_theme/templates/home/snippets/search.html:7
-msgid "UNIVERSITE DU QUEBEC EN ABITIBI - "
-msgstr ""
-
-#: ckanext/onicse_theme/templates/home/snippets/search.html:8
-msgid "TÉMISCAMINGUE (UQAT) OPEN DATA PORTAL "
 msgstr ""
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:10
@@ -186,3 +174,18 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
+#: ckanext/onicse_theme/templates/home/index.html:38
+msgid "Recently Updated Datasets"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/index.html:40
+msgid "All Datasets"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/index.html:29
+msgid "Our Data"
+msgstr ""
+
+#: ckanext/onicse_theme/templates/home/index.html:54
+msgid "No datasets have been added yet"
+msgstr ""
