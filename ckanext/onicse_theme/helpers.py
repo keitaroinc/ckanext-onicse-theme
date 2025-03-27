@@ -65,31 +65,4 @@ def get_date_by_id(package_id):
     except Exception as e:
         log.error(f"Error fetching creation date for package {package_id}: {str(e)}") # noqa
         return None
-
-
-def get_groups_by_id(package_id):
-    try:
-        package = logic.get_action('package_show')(
-            {'ignore_auth': True}, {'id': package_id}
-        )
-        groups = package.get('groups', [])
-
-        if not groups:
-            return None
-
-        group_titles = [group.get('title') for group in groups]
-
-        return group_titles
-
-    except Exception as e:
-        log.error(f"Error fetching groups for package {package_id}: {str(e)}")
-        return None
     
-    
-def get_all_groups():
-    data_dict = {
-        'all_fields': True
-    }
-    groups = toolkit.get_action('group_list')({}, data_dict)
-
-    return groups
