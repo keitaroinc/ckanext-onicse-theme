@@ -1,18 +1,18 @@
-{% set all_groups = h.get_all_groups() %}
+{% set all_groups = h.get_featured_groups(12) %}
 
 <div class="container py-4">
-    <div class="row">
+  <div class="row gy-3 gx-3">
     {% for group in all_groups %}
-          <div class="col-md-4">
-            <div class="card" id="group-topics-list">
-            <a href="/group/{{ group.id }}">
-              <div class="card-body" id="group-item">
-                <img class="" src="{{ group.image_display_url }}" id="group-icon"/>    
-                <h5 class="card-text" id="group-title">{{ group.title }}</h5>
-              </div>
-            </a>
+        <div class="col-md-4">
+          <div class="card">
+          <a href="/group/{{ group.id }}">
+            <div class="card-body">
+              <img class="" src="{{ group.image_display_url }}" width="40" height="40">    
+              <h5 class="card-text pt-1 pb-2">{{ group.title }}</h5>
             </div>
+          </a>
           </div>
-      {% endfor %}
-    </div>
+        </div>
+    {% endfor %}
   </div>
+</div>
