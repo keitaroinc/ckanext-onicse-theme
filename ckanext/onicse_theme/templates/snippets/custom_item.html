@@ -73,15 +73,6 @@
     </div>
   {% endif %}
 
-  {% set group_titles = h.get_groups_by_id(group.id) %}
-  {% if group_titles %}
-    <div class="group-name">
-        {% for group in group_titles %}
-          {{ group }}
-        {% endfor %}
-    </div>
-  {% endif %}
-
   {% if group.type == 'datarequest' %}
     <div class="datarequest-properties">
       {% if h.show_comments_tab() %}
