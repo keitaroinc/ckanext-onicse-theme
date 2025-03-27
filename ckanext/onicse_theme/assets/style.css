@@ -18,16 +18,16 @@
     --tag-bg-color: #f6f6f6;
     --font-family: "BwGradual", sans-serif;
     }
- body{
+body{
     a{
         color: var(--primary-color);
     }
     font-family: var(--font-family);
     color: var(--primary-color);
- } 
- a:hover{
+} 
+a:hover{
     color: inherit;
- }
+}
 .masthead {
     background: none !important;
     margin-top: -5px;
@@ -110,7 +110,7 @@
     list-style: none;
 }
 
-  .navbar-nav .nav-item{
+.navbar-nav .nav-item{
     margin-bottom: -25px;
 }
   .navbar-nav .nav-link, .navbar-nav .page-header .nav-tabs li a, .page-header .nav-tabs li .navbar-nav a {
@@ -120,7 +120,6 @@
 .navbar-nav .dropdown-menu {
     position: static;
 }
-  
 .navbar-text {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -130,8 +129,6 @@
     flex-grow: 1;
     align-items: center;
 }
-
-
 .navbar-expand-lg .navbar-collapse {
     flex: 1;
     justify-content: flex-start;
@@ -203,7 +200,6 @@
     border: 1px solid var(--primary-color);
     box-shadow: inset 0 1px 0 var(--primary-color);
 }
-
 .site-footer {
     background: none;
     padding: 30px 0;
@@ -215,38 +211,15 @@
 .site-footer .container {
     margin-top: 30px;
 }
+.site-footer {
+    background-color: var(--primary-color); 
+}
 .site-footer .attribution p strong {
     font-weight: bold !important;
     font-size: 15px;
 }
-
-/* All Datasets button */
-.all-dataset-btn {
-    background-color: var(--warning-btn-bg-color);
-    border-color: var(--secondary-color);
-    color: var(--white-color);
-    text-decoration: none;
-    padding: 7px 18px; 
-    font-size: 14px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-right: 30px;
-    margin-top: -23px;
-}
-
 .spacer {
     margin-top: 45px;
-}
-.add-dataset-btn:hover {
-    background-color: var(--secondary-color);
-}
-.site-footer {
-    background-color: var(--primary-color); 
-}
-.updated-datasets-section {
-    padding: 40px 0;
-    background-color: var(--group-icon-bg-color);
-    width: 100%;
 }
 .main {
     background-color: #ffffff !important;
@@ -254,14 +227,6 @@
     box-shadow: none !important;
     border: none !important;
 }
-
-.row.wrapper {
-    box-shadow: none;
-    border: none;
-    background-color: var(--white-color);
-    width: 100%;
-  }
-
 .toolbar {
     background-color: var(--toolbar-bg-color);
     padding: 10px;
@@ -269,7 +234,6 @@
 .toolbar .breadcrumb {
     font-size: 14px;
     padding: 0 .25rem;
-   
 }
 .toolbar .breadcrumb li {
     display: inline;
@@ -283,7 +247,6 @@
     text-decoration: none;
     font-weight: normal;
 }
-
 .btn-primary {
     background-color: var(--secondary-color) !important;
     border-color: var(--secondary-color)!important;
@@ -364,10 +327,6 @@
 .fas .fa-home{
     margin-left: 10px;
 }
-
-.subtitle{
-    padding-left: 11px;
-}
 .font-light{
     font-weight: 300;
 }
@@ -391,19 +350,21 @@
     width: 6px;
     height: 34px;
 }
-
 .module-narrow .nav-item.active, 
 .module-narrow .nav-aside li.active{
     background-color: transparent !important; 
 }
-
- .pill {
+.pill {
     background-color: var(--primary-color) !important; 
 }
-
 .page-header .nav-tabs li a{
     color: var(--secondary-color);
 }
 .page-header .nav-tabs li a:hover{
     color: var(--secondary-color);   
+}
+.updated-datasets-section {
+    padding: 40px 0;
+    background-color: var(--group-icon-bg-color);
+    width: 100%;
 }
