@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container pt-3">
     <h2 class="text-uppercase pt-5 mx-4">{{_("Our Data")}}</h2>
     {% block featured_group %}
     {% snippet 'group/snippets/custom_group_list.html' %}
@@ -34,14 +34,14 @@
     
   <div class="mt-4 updated-datasets-section">
     <div class="container">
-      <div class="hstack justify-content-between gap-2 px-4">
-        <h2 class="text-uppercase m-0 p-0">{{_("Recently Updated Datasets")}}</h2>
+      <div class="hstack justify-content-between gap-2 px-3">
+        <h2 class="text-uppercase pt-3 pb-1 ms-0">{{_("Recently Updated Datasets")}}</h2>
         <div class="add-dataset-btn-container">
           <a href="{{ h.url_for('/dataset/') }}" class="btn btn-primary">{{_("All Datasets")}}</a>
         </div>
       </div>
     
-      <div id="white-blocks-container">
+      <div class="">
         {% set recent_datasets = h.get_recently_updated_datasets() %}
         {% if recent_datasets %}
               {% set latest_datasets = recent_datasets[:3] %}
