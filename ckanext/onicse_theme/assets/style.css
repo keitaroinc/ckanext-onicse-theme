@@ -2,7 +2,7 @@
     --primary-color: #2b170c; /* Primary color */
     --secondary-color: #ca3f16;
     --nav-link-color: #333333;
-    --active-nav-link-color: #ca3f16; 
+    --active-nav-link-color: #ca3f16;
     --goldenrod-color: goldenrod;
     --sign-out-color: #c2c0c0;
     --notification-color: #e6802d;
@@ -24,7 +24,7 @@ body{
     }
     font-family: var(--font-family);
     color: var(--primary-color);
-} 
+}
 a:hover{
     color: inherit;
 }
@@ -42,7 +42,7 @@ a:hover{
 .account-masthead .account ul li a:hover {
     background-color: var(--primary-color);
     text-decoration: none;
-}  
+}
 .masthead .debug {
     position: fixed;
     top: 0;
@@ -75,7 +75,7 @@ a:hover{
 .navbar-expand-lg {
     margin-bottom: 30px;
     margin-top: 15px;
-} 
+}
 .main .primary{
     padding: 0 1rem;
 }
@@ -138,7 +138,7 @@ a:hover{
     box-shadow: none;
     border: none;
     align-items: center;
-    
+
 }
 .homepage .module-search .search-form {
     border-radius: 0.25rem;
@@ -158,7 +158,7 @@ a:hover{
     color: var(--gray-color);
     margin-top: -25px;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 .search-form{
     border-bottom: 1px;
@@ -172,7 +172,7 @@ a:hover{
     margin: 20px;
 }
 .homepage .hero {
-    background-image: url('/base/images/1.png') !important;
+    background-image: url('/base/images/onicse-header.png') !important;
     background-size: cover;
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -212,7 +212,7 @@ a:hover{
     margin-top: 30px;
 }
 .site-footer {
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
 }
 .site-footer .attribution p strong {
     font-weight: bold !important;
@@ -237,7 +237,7 @@ a:hover{
 }
 .toolbar .breadcrumb li {
     display: inline;
-}  
+}
 .toolbar .breadcrumb a {
     color: rgb(61, 61, 61);
     font-size: 14px;
@@ -261,7 +261,7 @@ a:hover{
     padding-top: 3px;
     padding-bottom: 3px;
     font-size: 14px;
-    line-height: 1.2; 
+    line-height: 1.2;
 }
 .filters .module-heading {
     background-color: var(--white-color);
@@ -310,7 +310,7 @@ a:hover{
 }
 
 .nav-facet .nav-item:last-child {
-    border-bottom: 1px solid #e9e8e8; 
+    border-bottom: 1px solid #e9e8e8;
 }
 
 .fa-filter{
@@ -330,12 +330,12 @@ a:hover{
 .font-light{
     font-weight: 300;
 }
-.module-narrow .nav-item.active > a, 
+.module-narrow .nav-item.active > a,
 .module-narrow .nav-aside li.active a {
     background-color: var(--primary-color);
     flex-grow: 1;
 }
-.module-narrow .nav-item.active > a:hover, 
+.module-narrow .nav-item.active > a:hover,
 .module-narrow .nav-aside li.active a:hover {
     background-color: var(--primary-color);
 }
@@ -350,18 +350,18 @@ a:hover{
     width: 6px;
     height: 34px;
 }
-.module-narrow .nav-item.active, 
+.module-narrow .nav-item.active,
 .module-narrow .nav-aside li.active{
-    background-color: transparent !important; 
+    background-color: transparent !important;
 }
 .pill {
-    background-color: var(--primary-color) !important; 
+    background-color: var(--primary-color) !important;
 }
 .page-header .nav-tabs li a{
     color: var(--secondary-color);
 }
 .page-header .nav-tabs li a:hover{
-    color: var(--secondary-color);   
+    color: var(--secondary-color);
 }
 .updated-datasets-section {
     padding: 50px 0;
