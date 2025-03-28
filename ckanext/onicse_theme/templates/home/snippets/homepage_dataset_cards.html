@@ -10,9 +10,10 @@
                                     {{ group.title }}{% if not loop.last %}, {% endif %}
                                 {% endfor %}
                             </div>
-                            <h4 class="card-title">
+                            {% endif %}
+                            <h3 class="card-title">
                                 <a href="/dataset/{{ dataset.id }}">{{ dataset.title }}</a>
-                            </h4>
+                            </h3>
                             {% set created_at = h.get_date_by_id(dataset.id) %}
                             {% if created_at %}
                                 <div class="card-footer mt-3 p-0 me-5 border-0 bg-body text-black-50">{{ created_at.strftime('%B %d, %Y') }}</div>
