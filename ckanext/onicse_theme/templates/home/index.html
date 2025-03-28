@@ -40,10 +40,8 @@
     <div class="container">
       <div class="hstack justify-content-between gap-2 px-3">
         <h2 class="text-uppercase pt-3 pb-1 ms-0">{{_("Recently Updated Datasets")}}</h2>
-        <div class="add-dataset-btn-container">
           <a href="{{ h.url_for('/dataset/') }}" class="btn btn-primary">{{_("All Datasets")}}</a>
         </div>
-      </div>
 
       <div class="">
         {% set recent_datasets = h.get_recently_updated_datasets() %}
