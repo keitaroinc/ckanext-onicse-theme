@@ -243,8 +243,8 @@
     font-weight: normal;
 }
 .btn-primary {
-    background-color: var(--secondary-color) !important;
-    border-color: var(--secondary-color)!important;
+    background-color: var(--bs-secondary) !important;
+    border-color: var(--bs-secondary)!important;
     color: var(--white-color) !important;
 }
 
@@ -353,10 +353,10 @@
     background-color: var(--bs-primary) !important;
 }
 .page-header .nav-tabs li a{
-    color: var(--secondary-color);
+    color: var(--bs-secondary);
 }
 .page-header .nav-tabs li a:hover{
-    color: var(--secondary-color);
+    color: var(--bs-secondary);
 }
 .updated-datasets-section {
     padding: 50px 0;
