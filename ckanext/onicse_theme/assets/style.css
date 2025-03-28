@@ -121,7 +121,6 @@
 }
 .homepage .module-search .search-form input {
     border-radius: 100px;
-    width: 2500px;
 }
 .homepage .module-search .tags {
     background: none;
@@ -129,16 +128,6 @@
     margin-top: -25px;
     display: flex;
     align-items: center;
-}
-.search-form{
-    border-bottom: 1px;
-}
-.search-form .search-input {
-    position: relative;
-    margin: 10px;
-    width: 100%;
-    position: relative;
-    margin: 20px;
 }
 .homepage .hero {
     background-image: url('/base/images/onicse-header.png') !important;
