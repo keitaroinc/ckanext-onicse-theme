@@ -28,8 +28,12 @@
   <div class="container pt-3">
     <h2 class="text-uppercase pt-5 px-3">{{_("Our Data")}}</h2>
     {% block featured_group %}
-    {% snippet 'group/snippets/custom_group_list.html' %}
-    {% endblock %}
+    {% if not group_list %}
+      <p class="alert alert-light mt-3 bg-transparent border-0">{{ _('No groups have been created yet') }}</p>
+    {% else %}
+      {% snippet 'group/snippets/custom_group_list.html' %}
+    {% endif %}
+  {% endblock %}
   </div>
 
   <div class="mt-4 updated-datasets-section">
@@ -47,7 +51,7 @@
               {% set latest_datasets = recent_datasets[:3] %}
               {{ h.snippet('home/snippets/homepage_dataset_cards.html', datasets=latest_datasets) }}
         {% else %}
-          <p class="alert alert-light mt-3">{{ _('No datasets have been added yet') }}</p>
+          <p class="alert alert-light mt-3 bg-transparent border-0">{{ _('No datasets have been created yet') }}</p>
         {% endif %}
       </div>
 
