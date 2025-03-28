@@ -1,32 +1,27 @@
-:root {
-    --primary-color: #2b170c; /* Primary color */
-    --secondary-color: #ca3f16;
-    --nav-link-color: #333333;
-    --active-nav-link-color: #ca3f16;
-    --goldenrod-color: goldenrod;
-    --sign-out-color: #c2c0c0;
-    --notification-color: #e6802d;
-    --white-color: #ffffff;
-    --gray-color: #7B7B7B;
-    --warning-btn-bg-color: #ca3f16;
-    --warning-btn-hover-color: #ca3f16;
-    --group-icon-bg-color: #f4f2ee;
-    --group-item-hover-bg-color: #ca3f16;
-    --category-item-bg-color: #f5f5f5;
-    --toolbar-bg-color: #f4f2ee;
-    --breadcrumb-color: rgb(128, 128, 128);
-    --tag-bg-color: #f6f6f6;
-    --font-family: "BwGradual", sans-serif;
-    }
-body{
-    a{
-        color: var(--primary-color);
-    }
-    font-family: var(--font-family);
-    color: var(--primary-color);
-}
-a:hover{
-    color: inherit;
+/*
+    Root variables overrides
+    https://getbootstrap.com/docs/5.3/customize/css-variables/#root-variables
+*/
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #2b170c;
+  --bs-secondary: #ca3f16;
+  --bs-link-color: #333333;
+  --active-nav-link-color: #ca3f16;
+  --goldenrod-color: goldenrod;
+  --sign-out-color: #c2c0c0;
+  --notification-color: #e6802d;
+  --white-color: #ffffff;
+  --gray-color: #7b7b7b;
+  --warning-btn-bg-color: #ca3f16;
+  --warning-btn-hover-color: #ca3f16;
+  --group-icon-bg-color: #f4f2ee;
+  --group-item-hover-bg-color: #ca3f16;
+  --category-item-bg-color: #f5f5f5;
+  --toolbar-bg-color: #f4f2ee;
+  --breadcrumb-color: rgb(128, 128, 128);
+  --tag-bg-color: #f6f6f6;
+  --bs-body-font-family: "BwGradual", sans-serif;
 }
 .masthead {
     background: none !important;
