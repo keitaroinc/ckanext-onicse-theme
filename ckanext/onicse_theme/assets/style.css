@@ -75,7 +75,7 @@
     padding: 0 1rem;
 }
 .masthead .main-navbar ul li a {
-    color: var(--nav-link-color) !important;
+    color: var(--bs-link-color) !important;
     font-size: 18px;
     text-decoration: none;
 }
@@ -250,7 +250,7 @@
 
 .label-info-custom {
     margin-top: -10px;
-    color: var(--nav-link-color);
+    color: var(--bs-link-color);
 }
 .filters .nav-item {
     padding-top: 3px;
