@@ -4,8 +4,7 @@
 
 <div class="homepage module-search card box">
     <form class="module-content search-form" method="get" action="{% url_for dataset_type ~ '.search' %}">
-        <h1 class="text-uppercase text-white font-light">{{ _("Observatoire National Sur Les Incidences Des Émissions De
-            Contaminants Sur La Santé Et L'environnement") }}</h1>
+        <h1 class="text-uppercase text-white font-light mb-5">{{ g.site_description }}</h1>
         <div class="search-input form-group search-giant">
             <input
                 aria-label="{% block header_site_search_label %}{{ h.humanize_entity_type('package', dataset_type, 'search placeholder') or _('Search datasets') }}{% endblock %}"
