@@ -5,7 +5,8 @@
                 <div class="col-12 col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <div class="card-header border border-0 mb-3 p-0 me-5 bg-body text-black-50 fw-bold">
+                            {% if dataset.groups %}
+                            <div class="card-text text-uppercase fs-6 mb-3 opacity-50">
                                 {% for group in dataset.groups %}
                                     {{ group.title }}{% if not loop.last %}, {% endif %}
                                 {% endfor %}
