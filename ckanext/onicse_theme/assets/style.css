@@ -4,35 +4,57 @@
 */
 :root,
 [data-bs-theme="light"] {
-  --bs-primary: #2b170c;
-  --bs-secondary: #ca3f16;
-  --bs-link-color: #333333;
+  --bs-primary: #ca3f16;
+  --bs-primary-rgb: 202, 63, 22;
+  --bs-secondary: #fd9907;
+  --bs-secondary-rgb: 253, 153, 7;
+  --bs-dark: #2b170c;
+  --bs-dark-rgb: 43, 23, 12;
+  --bs-highlight-color: var(--bs-secondary);
+  --bs-emphasis-color: var(--bs-secondary);
+  --bs-focus-ring-color: rgba(var(--bs-secondary), 0.25);
+  --bs-link-color: var(--bs-dark);
   --sign-out-color: #c2c0c0;
-  --bs-white: #ffffff;
   --bs-gray-100: #f8f9fa;
   --bs-light: #f4f2ee;
-  --bs-dark: #000;
   --bs-dark-line: #111111;
   --bs-gray-200: #e9ecef;
   --bs-body-font-family: "BwGradual", sans-serif;
 }
 .masthead {
   background: none !important;
-  margin-top: -5px;
-  margin-bottom: -5px;
+}
+a {
+  color: var(--bs-primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--bs-secondary);
+  text-decoration: inherit;
+}
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+  color: var(--bs-primary);
+  text-decoration: inherit;
 }
 .account-masthead {
-  background-color: var(--bs-primary);
+  background-color: var(--bs-dark);
+}
+.masthead .navbar hgroup h2,
+.masthead .navbar hgroup .h2 {
+  position: unset;
+  white-space: unset;
+  font-size: 14px;
 }
 .box,
 .wrapper {
-  background: none;
+  background: transparent;
 }
 .account-masthead .account ul li a:hover {
-  background-color: var(--bs-primary);
+  background-color: transparent;
 }
 .masthead .debug {
-  background-color: var(--bs-primary);
+  background-color: var(--bs-dark);
 }
 .masthead .navbar .logo {
   display: inline-block;
@@ -61,19 +83,11 @@
   font-size: 18px;
   text-decoration: none;
 }
-.masthead .main-navbar ul li a.active {
-  color: var(--bs-secondary) !important;
-}
 .masthead .main-navbar ul {
-  padding-right: 20px;
+  padding-right: 0;
 }
-.masthead .main-navbar ul li {
-  margin-right: 2px;
-}
-.masthead .main-navbar ul li a {
-  padding: 0.6rem 0.9rem;
-  color: var(--bs-white);
-  text-decoration: none;
+.masthead .main-navbar ul li a.active {
+  color: var(--bs-primary) !important;
 }
 .masthead .main-navbar ul li:hover a,
 .masthead .main-navbar ul li:focus a,
@@ -114,53 +128,18 @@
   border: none;
   align-items: center;
 }
-.homepage .module-search .search-form {
-  border-radius: 0.25rem;
-  background: none;
-  padding: 30px 20px 0px 20px;
-  color: var(--bs-gray-100);
-  text-align: center;
-  border: none;
-  width: 72%;
-}
 .homepage .module-search .search-form input {
   border-radius: 100px;
 }
 .homepage .module-search .tags {
   background: none;
   color: var(--bs-gray-100);
-  margin-top: -25px;
   display: flex;
   align-items: center;
 }
 .homepage .hero {
   background-image: url("/base/images/onicse-header.png") !important;
   background-size: cover;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-.tag {
-  display: inline-block;
-  margin-bottom: 4px;
-  color: var(--bs-dark-line);
-  background-color: var(--bs-white);
-  padding: 2px 12px;
-  border: 1px solid var(--bs-white);
-  border-radius: 100px;
-  box-shadow: inset 0 1px 0 var(--bs-white);
-}
-a.tag:hover {
-  text-decoration: none;
-  color: var(--bs-white);
-  background-color: var(--bs-primary);
-  border: 1px solid var(--bs-primary);
-  box-shadow: inset 0 1px 0 var(--bs-primary);
-}
-.site-footer .container {
-  margin-top: 30px;
-}
-.site-footer {
-  background-color: var(--bs-primary);
 }
 .site-footer .attribution p strong {
   font-weight: bold !important;
@@ -196,8 +175,8 @@ a.tag:hover {
   font-weight: normal;
 }
 .btn-primary {
-  background-color: var(--bs-secondary) !important;
-  border-color: var(--bs-secondary) !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
   color: var(--bs-white) !important;
 }
 
@@ -280,17 +259,17 @@ a.tag:hover {
 }
 .module-narrow .nav-item.active > a,
 .module-narrow .nav-aside li.active a {
-  background-color: var(--bs-primary);
+  background-color: var(--bs-dark);
   flex-grow: 1;
 }
 .module-narrow .nav-item.active > a:hover,
 .module-narrow .nav-aside li.active a:hover {
-  background-color: var(--bs-primary);
+  background-color: var(--bs-dark);
 }
 .module-narrow .nav-item.active > a::before,
 .module-narrow .nav-aside li.active a {
   border-right: none;
-  border-left-color: var(--bs-primary);
+  border-left-color: var(--bs-dark);
   border-left-width: 6px;
   top: 0;
   bottom: 0;
@@ -303,7 +282,7 @@ a.tag:hover {
   background-color: transparent !important;
 }
 .pill {
-  background-color: var(--bs-primary) !important;
+  background-color: var(--bs-dark) !important;
 }
 .page-header .nav-tabs li a {
   color: var(--bs-secondary);
