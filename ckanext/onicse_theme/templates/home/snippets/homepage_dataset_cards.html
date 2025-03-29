@@ -13,7 +13,7 @@
                             </div>
                             {% endif %}
                             <h3 class="card-title">
-                                <a href="/dataset/{{ dataset.id }}">{{ dataset.title }}</a>
+                                <a class="link-dark" href="/dataset/{{ dataset.id }}">{{ dataset.title }}</a>
                             </h3>
                             {% set created_at = h.get_date_by_id(dataset.id) %}
                             {% if created_at %}
