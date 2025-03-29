@@ -2,8 +2,8 @@
 {% set placeholder = _('Eg. environment') %}
 {% set dataset_type = h.default_package_type() %}
 
-<div class="homepage module-search card box">
-    <form class="module-content search-form" method="get" action="{% url_for dataset_type ~ '.search' %}">
+<div class="homepage module-search vstack gap-2">
+    <form class="module-content text-center search-form bg-transparent border-0 px-3 pb-0 mb-0 w-75" method="get" action="{% url_for dataset_type ~ '.search' %}">
         <h1 class="text-uppercase text-white font-light mb-4">{{ g.site_description }}</h1>
         <div class="search-input form-group search-giant">
             <input
