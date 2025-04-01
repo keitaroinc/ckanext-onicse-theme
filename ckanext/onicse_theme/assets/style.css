@@ -14,7 +14,6 @@
   --bs-emphasis-color: var(--bs-secondary);
   --bs-focus-ring-color: rgba(var(--bs-secondary), 0.25);
   --bs-link-color: var(--bs-dark);
-  --sign-out-color: #c2c0c0;
   --bs-gray-100: #f8f9fa;
   --bs-light: #f4f2ee;
   --bs-dark-line: #111111;
@@ -37,54 +36,17 @@ a:not([href]):not([class]):hover {
   color: var(--bs-primary);
   text-decoration: inherit;
 }
-.account-masthead {
-  background-color: var(--bs-dark);
-}
-.masthead .navbar hgroup h2,
-.masthead .navbar hgroup .h2 {
-  position: unset;
-  white-space: unset;
-  font-size: 14px;
-}
 .box,
 .wrapper {
   background: transparent;
 }
 .account-masthead .account ul li a:hover {
   background-color: transparent;
-}
-.masthead .debug {
-  background-color: var(--bs-dark);
-}
-.masthead .navbar .logo {
-  display: inline-block;
-}
-.masthead .navbar .logo img {
-  max-height: 60px;
-}
-.fa-sign-out {
-  color: var(--sign-out-color);
-  margin-bottom: -5px;
-}
-.notifications .badge {
-  background-color: transparent !important;
-  color: inherit;
-  border: none;
-}
-.navbar-expand-lg {
-  margin-bottom: 30px;
-  margin-top: 15px;
-}
-.main .primary {
-  padding: 0 1rem;
-}
+} 
 .masthead .main-navbar ul li a {
   color: var(--bs-link-color) !important;
   font-size: 18px;
   text-decoration: none;
-}
-.masthead .main-navbar ul {
-  padding-right: 0;
 }
 .masthead .main-navbar ul li a.active {
   color: var(--bs-primary) !important;
@@ -95,58 +57,12 @@ a:not([href]):not([class]):hover {
   border-radius: 0.3rem;
   background-color: var(--bs-white);
 }
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: -5px;
-  list-style: none;
-}
 .navbar-nav .nav-item {
   margin-bottom: -25px;
-}
-.navbar-nav .nav-link,
-.navbar-nav .page-header .nav-tabs li a,
-.page-header .nav-tabs li .navbar-nav a {
-  padding-right: 0;
-  padding-left: 0;
-}
-.navbar-nav .dropdown-menu {
-  position: static;
-}
-.navbar-text {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
-}
-.homepage .module-search {
-  box-shadow: none;
-  border: none;
-  align-items: center;
-}
-.homepage .module-search .search-form input {
-  border-radius: 100px;
-}
-.homepage .module-search .tags {
-  background: none;
-  color: var(--bs-gray-100);
-  display: flex;
-  align-items: center;
 }
 .homepage .hero {
   background-image: url("/base/images/onicse-header.png") !important;
   background-size: cover;
-}
-.site-footer .attribution p strong {
-  font-weight: bold !important;
-  font-size: 15px;
-}
-.spacer {
-  margin-top: 45px;
 }
 .main {
   background-color: var(--bs-white) !important;
@@ -158,58 +74,11 @@ a:not([href]):not([class]):hover {
   background-color: var(--bs-light);
   padding: 10px;
 }
-.toolbar .breadcrumb {
-  font-size: 14px;
-  padding: 0 0.25rem;
-}
-.toolbar .breadcrumb li {
-  display: inline;
-}
-.toolbar .breadcrumb a {
-  color: rgb(61, 61, 61);
-  font-size: 14px;
-}
-.toolbar .breadcrumb .active a {
-  color: rgb(61, 61, 61);
-  text-decoration: none;
-  font-weight: normal;
-}
 .btn-primary {
   background-color: var(--bs-primary) !important;
   border-color: var(--bs-primary) !important;
   color: var(--bs-white) !important;
 }
-
-.label-info-custom {
-  margin-top: -10px;
-  color: var(--bs-link-color);
-}
-.filters .nav-item {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: 14px;
-  line-height: 1.2;
-}
-.filters .module-heading {
-  background-color: var(--bs-white);
-}
-.module-content.empty {
-  font-style: italic;
-}
-.module-heading {
-  border: none;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--bs-dark);
-}
-.filters-module-heading {
-  margin-left: 35px;
-  margin: 0;
-  padding: 0.5rem 25px;
-  font-size: 12px;
-  background-color: none;
-}
-
 .nav-item {
   display: flex;
   justify-content: space-between;
@@ -217,42 +86,6 @@ a:not([href]):not([class]):hover {
   width: 100%;
   padding: 8px 10px;
   margin-bottom: 8px;
-}
-
-.item-label {
-  text-align: left;
-  white-space: nowrap;
-}
-
-.item-count {
-  font-weight: 700;
-  font-size: 12px;
-  color: var(--bs-dark-line);
-  white-space: nowrap;
-  margin-left: auto;
-}
-
-.nav-facet .nav-item {
-  border-bottom: 1px solid var(--bs-gray-200);
-}
-
-.nav-facet .nav-item:last-child {
-  border-bottom: 1px solid var(--bs-gray-200);
-}
-
-.fa-filter {
-  margin-right: 5px;
-}
-
-.module-content.page-header {
-  background-color: var(--bs-white);
-}
-
-.module-content .h1 {
-  font-weight: 700;
-}
-.fas .fa-home {
-  margin-left: 10px;
 }
 .font-light {
   font-weight: 300;
