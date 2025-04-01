@@ -46,7 +46,7 @@
           <form action="{{ h.url_for('user.logout') }}" method="post">
             {{ h.csrf_input() }}
             <button class="btn btn-link" type="submit" title="{{ _('Log out') }}">
-              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              <i class="fa fa-sign-out text-muted" aria-hidden="true"></i>
             </button>
           </form>
         </li>
@@ -75,10 +75,10 @@
   <div class="container">
     {% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
-    <div class="debug">Blueprint : {{ g.blueprint }}<br />View : {{ g.view }}</div>
+    <div class="debug bg-dark">Blueprint : {{ g.blueprint }}<br />View : {{ g.view }}</div>
     {% endif %}
     {% endblock %}
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light py-4">
       <hgroup class="{{ g.header_class }} vstack navbar-left">
 
       {% block header_logo %}
