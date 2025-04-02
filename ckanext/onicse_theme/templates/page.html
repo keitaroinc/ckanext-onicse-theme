@@ -13,11 +13,11 @@
   {%- block content %}
     {% block maintag %}<div class="main">{% endblock %}
     
-      <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
+      <div class="toolbar mb-5" role="navigation" aria-label="{{ _('Breadcrumb') }}">
         {% block breadcrumb %}
           {% if self.breadcrumb_content() | trim %}
           <div class="container">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb text-black-50 fs-6 text ms-1">
               <li class="home">
                 <a href="/">
                   <i class="fas fa-home"></i>

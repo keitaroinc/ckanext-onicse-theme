@@ -5,7 +5,7 @@
         {% block facet_list_item %}
         <section class="module module-narrow module-shallow">
             {% block facet_list_heading %}
-            <h2 class="module-heading">
+            <h2 class="module-heading bg-white border-0">
                 <i class="fa fa-filter"></i>
                 {{ title }}
             </h2>
@@ -20,14 +20,14 @@
                         {% set label = label_function(item) if label_function else item.display_name %}
                         {% set label_truncated = label|truncate(22) if not label_function else label %}
                         {% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
-                        <li class="nav-item {% if item.active %} active{% endif %}">
+                        <li class="nav-item border-bottom {% if item.active %} active{% endif %}">
                             <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
                                 <span class="item-label">{{ label_truncated }}</span>
                                 {% if item.active %}
                                     <span class="facet-close"> <i class="fa fa-solid fa-circle-xmark"></i></span>
                                 {% endif %}
                             </a>
-                            <span class="item-count">{{ count }}</span>
+                            <span class="item-count fw-bold">{{ count }}</span>
                         </li>
                     {% endfor %}
                     </ul>
@@ -42,7 +42,7 @@
                     {% endif %}
                 </p>
                 {% else %}
-                <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
+                <p class="module-content empty fst-italic">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
                 {% endif %}
             {% endwith %}
             {% endblock %}

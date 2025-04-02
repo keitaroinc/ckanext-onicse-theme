@@ -22,6 +22,4 @@ class OnicseThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 helpers.get_recently_updated_datasets,
             'get_date_by_id':
                 helpers.get_date_by_id,
-            'get_groups_by_id':
-                helpers.get_groups_by_id,
         }
