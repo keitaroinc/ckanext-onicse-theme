@@ -1,14 +1,29 @@
+{% set current_lang = request.environ.CKAN_LANG %}
 {% set tags = h.get_facet_items_dict('tags', search_facets, limit=3) %}
 {% set placeholder = _('Eg. environment') %}
 {% set dataset_type = h.default_package_type() %}
 
 <div class="homepage module-search vstack gap-2 border-0">
-    <form class="module-content text-center search-form bg-transparent border-0 px-3 pb-0 mb-0 w-75 mx-auto" method="get" action="{% url_for dataset_type ~ '.search' %}">
-        <h1 class="text-uppercase text-white font-light mb-4">{{ g.site_description }}</h1>
+    <form class="module-content text-center search-form bg-transparent border-0 px-3 pb-0 mb-0 w-75" method="get" action="{% url_for dataset_type ~ '.search' %}">
+        <h1 class="text-uppercase text-white font-light mb-4">
+            {% if current_lang == 'fr' %}
+                {% if g.site_description_fr %}
+                    {{ h.render_markdown(g.site_description_fr) }}
+                {% else %}
+                    {{ h.render_markdown(g.site_description) }}
+                {% endif %}
+            {% else %}
+                {% if g.site_description_en %}
+                    {{ h.render_markdown(g.site_description_en) }}
+                {% else %}
+                    {{ h.render_markdown(g.site_description) }}
+                {% endif %}
+            {% endif %}
+        </h1>
         <div class="search-input form-group search-giant">
             <input
                 aria-label="{% block header_site_search_label %}{{ h.humanize_entity_type('package', dataset_type, 'search placeholder') or _('Search datasets') }}{% endblock %}"
-                id="field-main-search" type="text" class="form-control rounded-pill" name="q" value="" autocomplete="off"
+                id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off"
                 placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
             <button class="btn" type="submit" aria-labelledby="search-label">
                 <i class="fa fa-search"></i>
@@ -17,7 +32,7 @@
         </div>
     </form>
     {% if tags %}
-    <div class="tags hstack gap-2 justify-content-center bg-transparent">
+    <div class="tags hstack gap-2 justify-content-center">
         <h4 class="fw-light my-0 me-2">{{ _('Popular tags') }}</h4>
         {% for tag in tags %}
         <a class="btn btn-sm btn-light rounded-pill" href="{% url_for 'dataset.search', tags=tag.name %}" title="{{ tag.display_name }}">{{
