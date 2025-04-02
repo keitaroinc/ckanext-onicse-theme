@@ -23,3 +23,17 @@ class OnicseThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_date_by_id':
                 helpers.get_date_by_id,
         }
+    
+
+    def update_config_schema(self, schema):
+
+        ignore_missing = toolkit.get_validator('ignore_missing')
+        validators = [ignore_missing]
+        schema.update({
+            'about_text_en': validators,
+            'about_text_fr': validators,
+            'site_description_en': validators,
+            'site_description_fr': validators,
+        })
+
+        return schema
