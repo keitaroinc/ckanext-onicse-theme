@@ -1,0 +1,34 @@
+{% extends "page.html" %}
+{% set current_lang = request.environ.CKAN_LANG %}
+
+{% block subtitle %}{{ _('About') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('About'), named_route='home.about' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module" role="main">
+    <div class="module-content">
+      {% block about %}
+        {% if current_lang == 'fr' %}
+          {% if g.site_about_fr %}
+            {{ h.render_markdown(g.site_about_fr) }}
+          {% else %}
+            <h1 class="page-heading">{{ _('About') }}</h1>
+            {% snippet 'home/snippets/about_text_fr.html' %}
+          {% endif %}
+        {% else %}
+          {% if g.site_about_en %}
+            {{ h.render_markdown(g.site_about_en) }}
+          {% else %}
+            <h1 class="page-heading">{{ _('About') }}</h1>
+            {% snippet 'home/snippets/about_text_en.html' %}
+          {% endif %}
+        {% endif %}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
