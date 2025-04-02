@@ -22,66 +22,68 @@ msgstr ""
 
 #: ckanext/onicse_theme/templates/footer.html:9
 msgid "About {0}"
-msgstr ""
+msgstr "À propos"
 
 #: ckanext/onicse_theme/templates/footer.html:15
 msgid "CKAN API"
-msgstr ""
+msgstr "API CKAN"
 
 #: ckanext/onicse_theme/templates/footer.html:16
 msgid "CKAN Association"
-msgstr ""
+msgstr "CKAN Association"
 
 #: ckanext/onicse_theme/templates/footer.html:24
 msgid ""
 "<strong>Powered by</strong> <a class=\"hide-text ckan-footer-logo\" "
 "href=\"http://ckan.org\">CKAN</a>"
 msgstr ""
+"<strong>Alimenté par</strong> <a class=\"hide-text ckan-footer-logo\" "
+"href=\"http://ckan.org\">CKAN</a>"
 
 #: ckanext/onicse_theme/templates/header.html:14
 msgid "Sysadmin settings"
-msgstr ""
+msgstr "Paramètres d'administrateur système"
 
 #: ckanext/onicse_theme/templates/header.html:16
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: ckanext/onicse_theme/templates/header.html:22
 msgid "View profile"
-msgstr ""
+msgstr "Voir le profil"
 
 #: ckanext/onicse_theme/templates/header.html:30
 msgid "View dashboard"
-msgstr ""
+msgstr "Afficher le tableau de bord"
 
 #: ckanext/onicse_theme/templates/header.html:32
 msgid "Dashboard"
-msgstr ""
+msgstr "Tableau de bord"
 
 #: ckanext/onicse_theme/templates/header.html:38
 #: ckanext/onicse_theme/templates/header.html:40
 msgid "Profile settings"
-msgstr ""
+msgstr "Paramètres du profil"
 
 #: ckanext/onicse_theme/templates/header.html:48
 msgid "Log out"
-msgstr ""
+msgstr "Se déconnecter"
 
 #: ckanext/onicse_theme/templates/header.html:58
 msgid "Account"
-msgstr ""
+msgstr "Compte"
 
 #: ckanext/onicse_theme/templates/header.html:61
 msgid "Log in"
-msgstr ""
+msgstr "Se connecter"
 
 #: ckanext/onicse_theme/templates/header.html:63
 msgid "Register"
-msgstr ""
+msgstr "Registre"
 
 #: ckanext/onicse_theme/templates/header.html:102
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Basculer la navigation"
 
 #: ckanext/onicse_theme/templates/header.html:115
 msgid "Datasets"
@@ -101,92 +103,72 @@ msgstr "À Propos"
 
 #: ckanext/onicse_theme/templates/page.html:6
 msgid "Skip to main content"
-msgstr ""
+msgstr "Accéder au contenu principal"
 
 #: ckanext/onicse_theme/templates/page.html:30
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Fil d'Ariane"
 
 #: ckanext/onicse_theme/templates/home/index.html:3
 msgid "Welcome"
-msgstr ""
-
-#: ckanext/onicse_theme/templates/home/index.html:28
-msgid "Nos Données"
-msgstr ""
-
-#: ckanext/onicse_theme/templates/home/index.html:55
-msgid "No datasets have been added yet"
-msgstr ""
-
-#: ckanext/onicse_theme/templates/home/snippets/search.html:2
-msgid "Eg. environment"
-msgstr ""
-
-#: ckanext/onicse_theme/templates/home/snippets/search.html:7
-msgid "Universite Du Quebec en Abitibi "
-msgstr ""
-
-#: ckanext/onicse_theme/templates/home/snippets/search.html:8
-msgid "Témiscamingue (Uqat) Open Data Portal "
-msgstr ""
+msgstr "Bienvenu"
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:10
 msgid "Search datasets"
-msgstr ""
+msgstr "Rechercher des ensembles de données"
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:13
 msgid "Search"
-msgstr ""
+msgstr "Recherche"
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:18
 msgid "Popular tags"
-msgstr ""
+msgstr "Mots-clés populaires"
 
 #: ckanext/onicse_theme/templates/snippets/custom_item.html:45
 msgid "Closed"
-msgstr ""
+msgstr "Fermé"
 
 #: ckanext/onicse_theme/templates/snippets/custom_item.html:49
 msgid "Open"
-msgstr ""
+msgstr "Ouvrir"
 
 #: ckanext/onicse_theme/templates/snippets/custom_item.html:57
 msgid "Private"
-msgstr ""
+msgstr "Privé"
 
 #: ckanext/onicse_theme/templates/snippets/custom_item.html:87
 #: ckanext/onicse_theme/templates/snippets/custom_item.html:90
 msgid "Remove"
-msgstr ""
+msgstr "Retirer"
 
 #: ckanext/onicse_theme/templates/snippets/custom_item.html:87
 msgid "Remove dataset from this group"
-msgstr ""
+msgstr "Supprimer l'ensemble de données de ce groupe"
 
 #: ckanext/onicse_theme/templates/snippets/custom_item.html:90
 msgid "Remove dataset from this showcase"
-msgstr ""
+msgstr "Supprimer l'ensemble de données de cette vitrine"
 
 #: ckanext/onicse_theme/templates/snippets/footer_company.html:3
 msgid "Company"
-msgstr ""
+msgstr "Entreprise"
 
 #: ckanext/onicse_theme/templates/snippets/footer_product.html:3
 msgid "Product"
-msgstr ""
+msgstr "Produit"
 
 #: ckanext/onicse_theme/templates/snippets/home_breadcrumb_item.html:1
 msgid "Home"
-msgstr ""
+msgstr "Maison"
 
 #: ckanext/onicse_theme/templates/snippets/language_selector.html:5
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
 #: ckanext/onicse_theme/templates/snippets/language_selector.html:16
 msgid "Go"
-msgstr ""
+msgstr "Aller"
 
 #: ckanext/onicse_theme/templates/home/index.html:38
 msgid "Recently Updated Datasets"
@@ -203,3 +185,31 @@ msgstr "Nos Données"
 #: ckanext/onicse_theme/templates/home/index.html:54
 msgid "No datasets have been added yet"
 msgstr "Aucun ensemble de données n'a encore été ajouté"
+
+#: ckanext/onicse_theme/templates/home/index.html:54
+msgid "No groups have been added yet"
+msgstr "Aucun groupe n'a encore été ajouté"
+
+#: ckanext/onicse_theme/templates/admin/config.htmll:9
+msgid "Site Tag Line in English"
+msgstr "Slogan du site en anglais"
+
+#: ckanext/onicse_theme/templates/admin/config.htmll:10
+msgid "Site Tag Line in French"
+msgstr "Slogan du site en français"
+
+#: ckanext/onicse_theme/templates/admin/config.htmll:13
+msgid "About us in English"
+msgstr "À propos de nous en anglais"
+
+#: ckanext/onicse_theme/templates/admin/config.htmll:14
+msgid "About us in French"
+msgstr "À propos de nous en français"
+
+#: ckanext/onicse_theme/templates/admin/config.htmll:13
+msgid "Enter text for about us in English."
+msgstr "Saisissez du texte à propos de nous en anglais."
+
+#: ckanext/onicse_theme/templates/admin/config.htmll:14
+msgid "Enter text for about us in French."
+msgstr "Saisissez du texte à propos de nous en français."
