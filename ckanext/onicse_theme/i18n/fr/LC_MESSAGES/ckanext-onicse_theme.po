@@ -22,7 +22,7 @@ msgstr ""
 
 #: ckanext/onicse_theme/templates/footer.html:9
 msgid "About {0}"
-msgstr "À propos"
+msgstr "À propos {0}"
 
 #: ckanext/onicse_theme/templates/footer.html:15
 msgid "CKAN API"
