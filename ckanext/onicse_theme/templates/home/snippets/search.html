@@ -7,19 +7,19 @@
     <form class="module-content text-center search-form bg-transparent border-0 px-3 pb-0 mb-0 w-75 mx-auto"
         method="get" action="{% url_for dataset_type ~ '.search' %}">
         <h1 class="text-uppercase text-white font-light mb-4">{{ g.site_description }}
-            {% if current_lang == 'fr' %}
+        {% if current_lang == 'fr' %}
             {% if g.site_description_fr %}
-            {{ h.render_markdown(g.site_description_fr) }}
+              {{ h.render_markdown(g.site_description_fr) }}
             {% else %}
-            {{ h.render_markdown(g.site_description) }}
+              {{ h.render_markdown(g.site_description) }}
             {% endif %}
-            {% else %}
+        {% else %}
             {% if g.site_description_en %}
-            {{ h.render_markdown(g.site_description_en) }}
+              {{ h.render_markdown(g.site_description_en) }}
             {% else %}
-            {{ h.render_markdown(g.site_description) }}
+              {{ h.render_markdown(g.site_description) }}
             {% endif %}
-            {% endif %}
+        {% endif %}
         </h1>
         <div class="search-input form-group search-giant">
             <input
