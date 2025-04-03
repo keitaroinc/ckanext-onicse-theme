@@ -66,3 +66,11 @@ def get_date_by_id(package_id):
         log.error(f"Error fetching creation date for package {package_id}: {str(e)}") # noqa
         return None
     
+
+def get_all_groups():
+    data_dict = {
+        'all_fields': True
+    }
+    groups = toolkit.get_action('group_list')({}, data_dict)
+    return groups
+    
