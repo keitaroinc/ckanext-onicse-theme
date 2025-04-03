@@ -28,7 +28,8 @@
   <div class="container pt-3">
     <h2 class="text-uppercase pt-5 px-3">{{_("Our Data")}}</h2>
     {% block featured_group %}
-    {% if not group_list %}
+    {% set all_groups = h.get_all_groups() %}
+    {% if all_groups|length == 0 %}
       <p class="alert alert-light mt-3">{{ _('No groups have been added yet') }}</p>
     {% else %}
       {% snippet 'group/snippets/custom_group_list.html' %}
