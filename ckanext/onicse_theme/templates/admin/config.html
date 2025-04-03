@@ -3,13 +3,12 @@
 
 {% block admin_form %}
 {{ h.csrf_input() }}
-{{ super() }}
-{{ form.input('site_description_en', id='field-ckan-site-description', label=_('Site Tag Line in English'),
-value=data['site_desctiption_en'], error=error) }}
-{{ form.input('site_description_fr', id='field-ckan-site-description', label=_('Site Tag Line in French'),
-value=data['site_desctiption_en'], error=error) }}
-{{ form.markdown('about_text_en', label=_('About us in English'), value=data.about_text_en, error=error,
-placeholder=_('Enter text for about us in English.')) }}
-{{ form.markdown('about_text_fr', label=_('About us in French'), value=data.about_text_fr, error=error,
-placeholder=_('Enter text for about us in French.')) }}
+
+  {{ super() }}
+
+  {{ form.input('site_description_en', id='field-ckan-site-description', label=_('Site Tag Line in English'), value=data['site_desctiption_en'], error=error) }}
+  {{ form.input('site_description_fr', id='field-ckan-site-description', label=_('Site Tag Line in French'), value=data['site_desctiption_en'], error=error) }}
+
+  {{ form.markdown('about_text_en', label=_('About us in English'), value=data.about_text_en, error=error, placeholder=_('Enter text for about us in English.')) }}
+  {{ form.markdown('about_text_fr', label=_('About us in French'), value=data.about_text_fr, error=error, placeholder=_('Enter text for about us in French.')) }}
 {% endblock %}
