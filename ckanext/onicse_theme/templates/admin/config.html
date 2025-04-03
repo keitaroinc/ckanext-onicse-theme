@@ -2,7 +2,7 @@
 {% import 'macros/form.html' as form %}
 
 {% block admin_form %}
-{{ h.csrf_input() }}
+  {{ h.csrf_input() }}
 
   {{ super() }}
 
