@@ -1,4 +1,4 @@
-{% set all_groups = h.get_featured_groups(12) %}
+{% set all_groups = h.get_all_groups() %}
 
 <div class="py-3">
   <div class="row gy-3 gx-3">
@@ -8,7 +8,7 @@
           <a href="/group/{{ group.id }}">
             <div class="card-body">
               <img class="" src="{{ group.image_display_url }}" width="40" height="40">    
-              <h5 class="card-text pt-1 pb-3">{{ group.title }}</h5>
+              <h5 class="card-text pt-2 pb-3 text-black">{{ group.title }}</h5>
             </div>
           </a>
           </div>
