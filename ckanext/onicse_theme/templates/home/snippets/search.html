@@ -6,7 +6,7 @@
 <div class="homepage module-search vstack gap-2 border-0">
     <form class="module-content text-center search-form bg-transparent border-0 px-3 pb-0 mb-0 w-75 mx-auto"
         method="get" action="{% url_for dataset_type ~ '.search' %}">
-        <h1 class="text-uppercase text-white font-light mb-4">{{ g.site_description }}
+        <h1 class="text-uppercase text-white font-light mb-4">
         {% if current_lang == 'fr' %}
             {% if g.site_description_fr %}
               {{ h.render_markdown(g.site_description_fr) }}
