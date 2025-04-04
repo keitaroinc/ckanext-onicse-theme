@@ -28,7 +28,7 @@
   <div class="container pt-3">
     <h2 class="text-uppercase pt-5 px-3">{{_("Our Data")}}</h2>
     {% block featured_group %}
-    {% set all_groups = h.get_all_groups() %}
+    {% set all_groups = h.groups_available() %}
     {% if all_groups|length == 0 %}
       <p class="alert alert-light mt-3">{{ _('No groups have been added yet') }}</p>
     {% else %}
