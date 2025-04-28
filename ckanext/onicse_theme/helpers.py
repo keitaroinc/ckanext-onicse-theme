@@ -72,7 +72,7 @@ def is_internal_login_enabled():
     """
     Check if internal login (SSO) is enabled in CKAN configuration.
     """
-    enable_internal_login = toolkit.config.get('ckanext.saml2auth.enable_ckan_internal_login', None)
+    enable_internal_login = toolkit.config.get('ckanext.saml2auth.enable_ckan_internal_login', 'False')
     
     # If the setting is None or not "True" return False
-    return enable_internal_login and enable_internal_login.lower() == 'true'
+    return enable_internal_login.lower() == 'true'
