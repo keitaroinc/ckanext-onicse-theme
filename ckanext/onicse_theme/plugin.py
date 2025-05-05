@@ -22,6 +22,8 @@ class OnicseThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 helpers.get_recently_updated_datasets,
             'get_date_by_id':
                 helpers.get_date_by_id,
+            'is_internal_login_enabled':
+                helpers.is_internal_login_enabled,
         }
     
 

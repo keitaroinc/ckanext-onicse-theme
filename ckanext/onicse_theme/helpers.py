@@ -4,6 +4,7 @@ from datetime import datetime
 from logging import getLogger
 import ckan.logic as logic
 from ckan.logic import NotFound
+from ckan import config
 
 log = getLogger(__name__)
 
@@ -66,3 +67,12 @@ def get_date_by_id(package_id):
         log.error(f"Error fetching creation date for package {package_id}: {str(e)}") # noqa
         return None
     
+
+def is_internal_login_enabled():
+    """
+    Check if internal login (SSO) is enabled in CKAN configuration.
+    """
+    enable_internal_login = toolkit.config.get('ckanext.saml2auth.enable_ckan_internal_login', 'False')
+    
+    # If the setting is None or not "True" return False
+    return enable_internal_login.lower() == 'true'
