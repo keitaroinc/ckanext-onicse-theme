@@ -28,15 +28,12 @@ msgstr "API CKAN"
 
 #: ckanext/onicse_theme/templates/footer.html:16
 msgid "CKAN Association"
-msgstr "CKAN Association"
+msgstr "Association CKAN"
 
 #: ckanext/onicse_theme/templates/footer.html:24
-msgid ""
-"<strong>Powered by</strong> <a class=\"hide-text ckan-footer-logo\" "
-"href=\"http://ckan.org\">CKAN</a>"
-msgstr ""
-"<strong>Alimenté par</strong> <a class=\"hide-text ckan-footer-logo\" "
-"href=\"http://ckan.org\">CKAN</a>"
+msgid "Powered by"
+msgstr "Propulsé par"
+
 
 #: ckanext/onicse_theme/templates/header.html:14
 msgid "Sysadmin settings"
@@ -88,7 +85,7 @@ msgid "Datasets"
 msgstr "Ensembles De Données"
 
 #: ckanext/onicse_theme/templates/header.html:120
-msgid "Organizations"
+msgid "Organization"
 msgstr "Organisations"
 
 #: ckanext/onicse_theme/templates/header.html:125
@@ -170,7 +167,7 @@ msgstr "Aller"
 
 #: ckanext/onicse_theme/templates/home/index.html:38
 msgid "Recently Updated Datasets"
-msgstr "Ensembles De Données Récemment Mises À Jour"
+msgstr "Ensembles de données récemment mis à jour"
 
 #: ckanext/onicse_theme/templates/home/index.html:40
 msgid "All Datasets"
@@ -211,3 +208,83 @@ msgstr "Saisissez du texte à propos de nous en anglais."
 #: ckanext/onicse_theme/templates/admin/config.htmll:14
 msgid "Enter text for about us in French."
 msgstr "Saisissez du texte à propos de nous en français."
+
+# ckanext/onicse_theme/templates/home/snippets/search.html:3
+msgid "Eg. environment"
+msgstr "Eg. environnement"
+
+# ckanext/onicse_theme/templates/package/resource_read.html:141
+msgid "Additional Information"
+msgstr "Information additionnelle"
+
+# ckanext/onicse_theme/templates/package/resource_read.html:141
+msgid "Additional Info"
+msgstr "Information additionnelle"
+
+# ckanext/onicse_theme/templates/package/resource_read.html:73
+msgid "Dataset description:"
+msgstr "Description du jeu de données:"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Show more"
+msgstr "Montrer plus"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Hide"
+msgstr "Cacher"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "True"
+msgstr "Vrai"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "False"
+msgstr "Faux"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Datastore active"
+msgstr "Datastore actif"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Datastore contains all records of source file."
+msgstr "Le datastore contient touts les enregistrements de dossiers sources."
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Has views"
+msgstr "A été vu"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Id"
+msgstr "Identifiant"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Mimetype"
+msgstr "Types MIME"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Package id"
+msgstr "Identifiant du paquet"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Size"
+msgstr "Taille"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "State"
+msgstr "État"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Url type"
+msgstr "Type d’URL"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Position"
+msgstr "Position"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Datastore active"
+msgstr "Datastore actif"
+
+# ckanext/onicse_theme/templates/package/resource_read.html
+msgid "Datastore contains all records of source file"
+msgstr "Le datastore contient touts les enregistrements de dossiers sources"
