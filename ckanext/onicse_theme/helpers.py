@@ -85,12 +85,18 @@ def groups_available():
     from ckan.logic import get_action
     from ckan.common import config
     
-    # First attempt using the featured groups
+    # Get featured groups from configuration
     featured_groups = config.get("ckan.featured_groups", "")
     if featured_groups:
         try:
             groups = []
-            for group_name in featured_groups.split():
+            # Handle both string format ("climat environnement") and list format ["uuid1", "uuid2"]
+            if isinstance(featured_groups, list):
+                group_names = featured_groups
+            else:
+                group_names = featured_groups.split()
+            
+            for group_name in group_names:
                 try:
                     group = get_action("group_show")(
                         {"ignore_auth": True}, 
@@ -104,7 +110,7 @@ def groups_available():
         except Exception as e:
             log.warning(f"Error getting featured groups: {e}")
     
-    # Fallback : use all public groups
+    # Fallback: return all public groups
     try:
         return get_action("group_list")(
             {"ignore_auth": True}, 
