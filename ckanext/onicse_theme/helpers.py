@@ -76,3 +76,40 @@ def is_internal_login_enabled():
     
     # If the setting is None or not "True" return False
     return enable_internal_login.lower() == 'true'
+
+def groups_available():
+    """
+    Returns the configured featured groups or all public groups
+    Compatible with anonymous users
+    """
+    from ckan.logic import get_action
+    from ckan.common import config
+    
+    # First attempt using the featured groups
+    featured_groups = config.get("ckan.featured_groups", "")
+    if featured_groups:
+        try:
+            groups = []
+            for group_name in featured_groups.split():
+                try:
+                    group = get_action("group_show")(
+                        {"ignore_auth": True}, 
+                        {"id": group_name}
+                    )
+                    groups.append(group)
+                except:
+                    continue
+            if groups:
+                return groups
+        except Exception as e:
+            log.warning(f"Error getting featured groups: {e}")
+    
+    # Fallback : use all public groups
+    try:
+        return get_action("group_list")(
+            {"ignore_auth": True}, 
+            {"all_fields": True}
+        )
+    except Exception as e:
+        log.warning(f"Error getting all groups: {e}")
+        return []
