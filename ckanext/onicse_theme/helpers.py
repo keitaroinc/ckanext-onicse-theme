@@ -83,32 +83,15 @@ def groups_available():
     Compatible with anonymous users
     """
     from ckan.logic import get_action
-    from ckan.common import config
+    import ckan.lib.helpers as h
     
-    # Get featured groups from configuration
-    featured_groups = config.get("ckan.featured_groups", "")
-    if featured_groups:
-        try:
-            groups = []
-            # Handle both string format ("climat environnement") and list format ["uuid1", "uuid2"]
-            if isinstance(featured_groups, list):
-                group_names = featured_groups
-            else:
-                group_names = featured_groups.split()
-            
-            for group_name in group_names:
-                try:
-                    group = get_action("group_show")(
-                        {"ignore_auth": True}, 
-                        {"id": group_name}
-                    )
-                    groups.append(group)
-                except:
-                    continue
-            if groups:
-                return groups
-        except Exception as e:
-            log.warning(f"Error getting featured groups: {e}")
+    try:
+        # Use CKAN's built-in featured groups logic with higher count
+        featured = h.get_featured_groups(count=10)
+        if featured:
+            return featured
+    except Exception as e:
+        log.warning(f"Error getting featured groups: {e}")
     
     # Fallback: return all public groups
     try:
