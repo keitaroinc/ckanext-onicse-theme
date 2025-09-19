@@ -2,9 +2,9 @@ from ckan.plugins import toolkit
 from ckan.lib import search
 from datetime import datetime
 from logging import getLogger
+import json
 import ckan.logic as logic
 from ckan.logic import NotFound
-from ckan import config
 
 log = getLogger(__name__)
 
@@ -83,20 +83,77 @@ def groups_available():
     Compatible with anonymous users
     """
     from ckan.logic import get_action
-    import ckan.lib.helpers as h
-    
-    try:
-        # Use CKAN's built-in featured groups logic with higher count
-        featured = h.get_featured_groups(count=10)
-        if featured:
-            return featured
-    except Exception as e:
-        log.warning(f"Error getting featured groups: {e}")
-    
-    # Fallback: return all public groups
+    from ckan.plugins import toolkit
+    import json
+
+    def _parse_featured_group_names(raw_value):
+        if not raw_value:
+            return []
+
+        candidate_values = None
+        if isinstance(raw_value, str):
+            stripped = raw_value.strip()
+            if not stripped:
+                return []
+            try:
+                parsed = json.loads(stripped)
+            except ValueError:
+                # Fallback: treat as space/comma separated string
+                candidate_values = toolkit.aslist(stripped)
+            else:
+                if isinstance(parsed, list):
+                    candidate_values = parsed
+                else:
+                    candidate_values = toolkit.aslist(parsed)
+        else:
+            candidate_values = toolkit.aslist(raw_value)
+
+        if candidate_values is None:
+            candidate_values = []
+
+        cleaned_names = []
+        for value in candidate_values:
+            if value is None:
+                continue
+            if isinstance(value, str):
+                cleaned_value = value.strip().strip(",")
+                cleaned_value = cleaned_value.strip("'\"'")
+            else:
+                cleaned_value = str(value)
+            if cleaned_value:
+                cleaned_names.append(cleaned_value)
+        return cleaned_names
+
+    # First attempt using the featured groups
+    featured_groups = toolkit.config.get("onicse.featured_groups", "")
+    group_names = _parse_featured_group_names(featured_groups)
+
+    if group_names:
+        try:
+            groups = []
+            for group_name in group_names:
+                try:
+                    group = get_action("group_show")(
+                        {"ignore_auth": True},
+                        {"id": group_name}
+                    )
+                    groups.append(group)
+                except Exception as exc:
+                    log.warning(
+                        "Featured group '%s' could not be loaded and will be ignored: %s",
+                        group_name,
+                        exc,
+                    )
+                    continue
+            if groups:
+                return groups
+        except Exception as e:
+            log.warning(f"Error getting featured groups: {e}")
+
+    # Fallback: use all public groups
     try:
         return get_action("group_list")(
-            {"ignore_auth": True}, 
+            {"ignore_auth": True},
             {"all_fields": True}
         )
     except Exception as e:
