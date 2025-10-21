@@ -106,7 +106,7 @@ msgstr "Fil d'Ariane"
 
 #: ckanext/onicse_theme/templates/home/index.html:3
 msgid "Welcome"
-msgstr "Bienvenu"
+msgstr "Bienvenue"
 
 #: ckanext/onicse_theme/templates/home/snippets/search.html:10
 msgid "Search datasets"
