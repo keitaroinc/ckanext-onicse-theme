@@ -24,6 +24,8 @@ class OnicseThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 helpers.get_date_by_id,
             'is_internal_login_enabled':
                 helpers.is_internal_login_enabled,
+            'groups_available': 
+                helpers.groups_available,
         }
     
 
