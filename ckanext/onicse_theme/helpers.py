@@ -71,8 +71,10 @@ def get_date_by_id(package_id):
 def is_internal_login_enabled():
     """
     Check if internal login (SSO) is enabled in CKAN configuration.
+    Returns:
+        bool: True if internal login is explicitly enabled in CKAN config, otherwise False.
     """
-    enable_internal_login = toolkit.config.get('ckanext.saml2auth.enable_ckan_internal_login', 'False')
-    
-    # If the setting is None or not "True" return False
-    return enable_internal_login.lower() == 'true'
+    value = toolkit.config.get('ckanext.saml2auth.enable_ckan_internal_login', 'False')
+    if value is None:
+        return False
+    return str(value).strip().lower() == 'true'
